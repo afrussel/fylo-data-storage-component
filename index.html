@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main>
+      <section class="brand">
+        <div class="logo">
+          <a href="#"><img src="images/logo.svg" alt="logo" /></a>
+        </div>
+        <ul class="icons">
+          <li>
+            <a href="#"
+              ><img src="images/icon-document.svg" alt="document icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/icon-folder.svg" alt="folder icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/icon-upload.svg" alt="upload icon"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <section class="storage">
+        <p>
+          You've used <span class="counter" data-target="815">0</span>GB of your
+          storage
+        </p>
+        <div class="progress-bar">
+          <div id="bar" class="progress-value">
+            <span class="slider"></span>
+          </div>
+        </div>
+        <div class="capacity">
+          <h5>0GB</h5>
+          <h5>1000GB</h5>
+        </div>
+      </section>
+      <section class="alert">
+        <p class="counter" data-target="185">0</p>
+        <span>gb left</span>
+      </section>
+    </main>    
+    <script src="js/main.js"></script>
+  </body>
+</html>

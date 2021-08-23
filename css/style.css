@@ -1,0 +1,264 @@
+:root {
+  --primary-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --darker-blue: hsl(229, 57%, 11%);
+  --white: #fff;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--darker-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  min-height: 100%;
+  max-width: 144rem;
+  background-image: url(../images/bg-mobile.svg);
+  background-size: cover;
+  margin: 0 auto;
+}
+
+main {
+  width: 85%;
+  max-width: 92rem;
+  position: relative;
+}
+
+.brand,
+.storage {
+  background: var(--dark-blue);
+  border-radius: 0.8rem;
+}
+
+.brand {
+  padding: 3rem 11rem 4rem 4rem;
+  border-top-right-radius: 10rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  padding-bottom: 3.5rem;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin-left: 1.5rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: var(--darker-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+.storage {
+  padding: 2.8rem 3.2rem 5.6rem;
+  position: relative;
+  color: var(--pale-blue);
+  margin-bottom: 2rem;
+}
+
+.storage p {
+  font-size: 1.4rem;
+  text-align: center;
+  padding-bottom: 1.4rem;
+}
+
+.counter {
+  font-weight: 700;
+}
+
+.progress-bar {
+  height: 1.8rem;
+  background: var(--darker-blue);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.progress-value {
+  position: relative;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 1.4rem;
+  border-radius: 0.8rem;
+  transform: translate(2px, 2px);
+  width: 75%;
+
+  animation: progressBar 1s ease both;
+  animation-fill-mode: both;
+  -webkit-animation: progressBar 1s ease both;
+  -moz-animation: progressBar 1s ease both;
+}
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@-moz-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+.slider {
+  position: relative;
+  top: 1px;
+  display: block;
+  height: 1.1rem;
+  width: 1.1rem;
+  background: var(--white);
+  border-radius: 1rem;
+  left: calc(100% - 1.5rem);
+}
+
+.capacity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.capacity h5 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.alert {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 18rem;
+  height: 7rem;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.alert p {
+  font-size: 3.65rem;
+  font-weight: 700;
+  color: var(--darker-blue);
+}
+
+.alert span {
+  font-size: 1.3rem;
+  color: var(--grayish-blue);
+  align-self: center;
+  padding-left: 1rem;
+  text-transform: uppercase;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 8%, 48%);
+}
+
+@media screen and (max-width: 767px) {
+  .alert {
+    bottom: -1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-size: 100% 50%;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .brand {
+    flex: 1;
+    margin-right: 3.5rem;
+    padding: 3rem 8rem 4rem 4rem;
+  }
+
+  .storage {
+    flex: 2;
+    align-self: flex-end;
+    height: 15rem;
+    padding-left: 3rem;
+    padding-top: 3.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .storage p {
+    text-align: left;
+  }
+
+  .alert {
+    margin-right: 0;
+    right: 4rem;
+    top: -0.5rem;
+  }
+
+  .alert::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top-color: var(--white);
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -1.3rem;
+    margin-bottom: -2.1rem;
+  }
+}
